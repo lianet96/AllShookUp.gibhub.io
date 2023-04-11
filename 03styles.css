@@ -1,0 +1,128 @@
+html, body {
+    height: 100%;
+    position: relative;
+}
+
+body{
+    margin: 0;
+    padding:0;
+    cursor: url( 'media/milkshake.png'), auto;
+    background: linear-gradient(360deg, rgba(9,1,133,1) 0%, rgba(200,66,177,1) 49%, rgba(0,212,255,1) 100%);
+    background-attachment: fixed;
+}
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px !important;
+    height: 150px !important;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 8px;
+  }
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    height: calc(12vh - 60px);
+    padding-bottom: 10px;
+    align-items: center; /* new style for vertical centering */
+}
+
+.button {
+    background-color: rgb(245, 90, 219);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none; /* remove underline */
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover{
+    background-color: rgb(133, 80, 255);
+}
+.center {
+    text-align: center;
+  }
+
+.story {
+    background-color: rgba(255, 149, 211, 0.534);
+    padding: 20px;
+    max-width: 530px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+.story-container {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 550px;
+}
+.story{
+    text-align: center;
+
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cover img {
+    width: 30% !important;
+    height: 30% !important;
+    margin-bottom: 5%;
+}
+.story {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.box-content {
+    text-align: center;
+}
+
+.cover img {
+    width: 100%;
+    height: auto;
+}
+.box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .music-player {
+    position: fixed;
+    top: 10px;
+    right: 33px;
+    width: 303px;
+    height: 50px;
+    background-color: #ff57b3d3;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+
+

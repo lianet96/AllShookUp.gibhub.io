@@ -1,0 +1,127 @@
+html, body {
+    height: 100%;
+    position: relative;
+}
+
+body{
+    margin: 0;
+    padding:0;
+    cursor: url( 'media/milkshake.png'), auto;
+    background: linear-gradient(360deg, rgba(9,1,133,1) 0%, rgba(200,66,177,1) 49%, rgba(0,212,255,1) 100%);
+    background-attachment: fixed;
+}
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px !important;
+    height: 150px !important;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    height: calc(12vh - 60px);
+    padding-bottom: 10px;
+    align-items: center; /* new style for vertical centering */
+}
+
+.button {
+    background-color: rgb(245, 90, 219);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none; /* remove underline */
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover{
+    background-color: rgb(133, 80, 255);
+}
+.page1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page1 img {
+    display: block;
+    width: 600px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page2 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page2 img {
+    display: block;
+    width: 600px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page3 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page3 img {
+    display: block;
+    width: 600px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page4 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page4 img {
+    display: block;
+    width: 600px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page5 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page5 img {
+    display: block;
+    width: 600px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #ffbbee8e;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+  }

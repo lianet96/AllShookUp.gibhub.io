@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="03styles.css">
+  <style>
+    .button {
+      background-color: rgb(245, 90, 219);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Center the buttons within the containing div */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+    <div class="music-player">
+        <audio id="audio" controls loop>
+          <source src="media/All Shook Up.mp3" type="audio/mpeg">
+          <source src="media/Put Your Head On My Shoulder.mp3" type="audio/mpeg">
+          <source src="media/Earth Angel.mp3" type="audio/mpeg">
+        </audio>
+        <div class="button-container">
+          <button class="button" id="back-btn">&#x25c4;</button>
+          <button class="button" id="play-btn">&#x25ba;</button>
+          <button class="button" id="forward-btn">&#x25ba;&#x25ba;</button>
+        </div>
+      </div>
+    <img src="media/logo.png" alt="Logo">
+    <div class="button-container">
+      <!-- Add buttons for Home, Characters, and Shop -->
+      <button class="button"><a href="Home.html">Home</a></button>
+      <button class="button"><a href="comic.html">Comic</a></button>
+      <button class="button"><a href="characters.html">Characters</a></button>
+      <button class="button"><a href="https://www.etsy.com/shop/PastelPrizm" target="_blank">Shop</a></button>
+    </div>
+    <div class="story">
+        <b><h1>The Story</h1></b>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; David is the new boy in town, arriving in the small 1950s community with a love for music that matches John's.
+            Rose, who has grown up with John and always had a secret crush on him, introduces David to John in the hopes that 
+            David can help her win over John's heart.However, as John and David spend more time together, their shared passion for
+            music brings them closer, and they start to realize that their feelings for each other go beyond friendship.
+            As Rose observes the growing connection between John and David, she must confront her own unrequited love
+            and come to terms with the possibility of a love that was never meant to be.
+        </p>
+    </div>
+    <div class="cover">
+        <img src="media/Cover.png">
+    </div>
+    <div class="box">
+        <div class="inner-box">
+            <div class="box-content">
+                <h2>Check out our latest Chapter!</h2>
+                <p>Join John and David on their musical journey through the 1950s.</p>
+                <a href="comic.html" class="button">Read now</a>
+            </div>
+        </div>
+    </div>
+    <div class="box2" style="padding-top: 20px; padding-bottom: 20px;">
+    
+        <p></p>
+    </div>
+    <script>
+        const audio = document.getElementById("audio");
+        const playBtn = document.getElementById("play-btn");
+        const backBtn = document.getElementById("back-btn");
+        const forwardBtn = document.getElementById("forward-btn");
+        let currentSongIndex = 0;
+        let songs = [
+          "media/All Shook Up.mp3",
+          "media/Put Your Head On My Shoulder.mp3",
+          "media/Earth Angel.mp3"
+        ];
+      
+        function playSong() {
+          audio.src = songs[currentSongIndex];
+          audio.play();
+          playBtn.innerHTML = "&#x2590;&#x2590;";
+        }
+      
+        playBtn.addEventListener("click", function() {
+          if (audio.paused) {
+            audio.play();
+            playBtn.innerHTML = "&#x2590;&#x2590;";
+          } else {
+            audio.pause();
+            playBtn.innerHTML = "&#x25ba;";
+          }
+        });
+      
+        backBtn.addEventListener("click", function() {
+          currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+          playSong();
+        });
+      
+        forwardBtn.addEventListener("click", function() {
+          currentSongIndex = (currentSongIndex + 1) % songs.length;
+          playSong();
+        });
+      
+        audio.addEventListener("ended", function() {
+          currentSongIndex = (currentSongIndex + 1) % songs.length;
+          playSong();
+        });
+
+        window.addEventListener("load", function() {
+        const audio = document.getElementById("audio");
+        audio.play();
+        });
+      </script>
+</body>
+</html>

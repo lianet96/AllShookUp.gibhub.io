@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Comic</title>
+    <link rel="stylesheet" type="text/css" href="02styles.css">
+    <style>
+        .button {
+          background-color: rgb(245, 90, 219);
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px 5px;
+          cursor: pointer;
+          border-radius: 5px;
+        } 
+      
+        /* Center the buttons within the containing div */
+        .button-container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          max-width: 960px;
+          margin: 0 auto;
+        }
+      </style>
+</head>
+<body>
+    <img src="media/logo.png" class="logo">
+     <div class="button-container">
+        <!-- Add buttons for Home, Characters, and Shop -->
+        <button class="button"><a href="Home.html">Home</a></button>
+        <button class="button"><a href="comic.html">Comic</a></button>
+        <button class="button"><a href="characters.html">Characters</a></button>
+        <button class="button"><a href="https://www.etsy.com/shop/PastelPrizm" target="_blank">Shop</a></button>
+      </div>
+     <div class="page1">
+        <img src="media/page 1.png" alt="ComicPage">
+      </div>
+      <div class="page2">
+        <img src="media/page 2.png" alt="ComicPage">
+        </div>
+      <div class="page3">
+        <img src="media/page 3.png" alt="ComicPage">
+        </div>
+      <div class="page4">
+          <img src="media/page 4.png" alt="ComicPage">
+          </div>
+  
+      <div class="page5">
+            <img src="media/page 5.png" alt="ComicPage">
+            </div>
+
+      <button id="back-to-top-btn">&#8593; Back to top</button> 
+      
+      <script>
+        var backToTopBtn = document.getElementById("back-to-top-btn");
+
+        window.onscroll = function() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+          } else {
+            backToTopBtn.style.display = "none";
+          }
+        };
+
+        backToTopBtn.onclick = function() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        };
+      </script>
+</body>
+</html>

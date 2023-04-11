@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Character page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .button {
+      background-color: rgb(245, 90, 219);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Center the buttons within the containing div */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <img src="media/logo.png" alt="Logo">
+  <div class="button-container">
+    <!-- Add buttons for Home, Characters, and Shop -->
+    <button class="button"><a href="Home.html">Home</a></button>
+    <button class="button"><a href="comic.html">Comic</a></button>
+    <button class="button"><a href="characters.html">Characters</a></button>
+    <button class="button"><a href="https://www.etsy.com/shop/PastelPrizm" target="_blank">Shop</a></button>
+  </div>
+
+  <div class="photo">
+    <img src="media/john.png" alt="John" id="john">
+    <div class="description" id="john-desc">
+      <h2>John</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John is a young, nerdy boy living in the year 1956. He is a passionate lover<br>
+       of music and spends most of his time listening to his favorite records. Despite being
+       the only boy in his family, he has no interest in romance and prefers to focus on his
+       music instead.With his thick-rimmed glasses and awkward demeanor, John is 
+      often overlooked by his peers, but his love for music fuels his passion
+      and creativity, making him a force to be reckoned with in the local music scene.</p>
+    </div>
+  </div>
+  
+  <div class="photo">
+    <img src="media/rose.png" alt="Rose" id="rose">
+    <div class="description" id="rose-desc">
+      <h2>Rose</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rose is a young woman who lives with her grandmother in a suburban
+        neighborhood. She is outgoing and cheerful, but has insecurities about her red 
+        hair and freckles, feeling that she doesn't meet the beauty standards of the 1950s.
+        Rose has been best friends with her next door neighbor, John, since childhood, and 
+        over time she has developed romantic feelings for him. However, she has never had
+        the courage to tell him how she feels, and worries that he only sees her as a friend.
+        Rose's mother ran off with a boyfriend and never came back, which has left her feeling 
+        abandoned and longing for a deeper sense of connection with those around her.
+        Despite this, Rose tries to stay positive and make the most of every day.</p>
+    </div>
+  </div>
+  
+  <div class="photo">
+    <img src="media/david.png" alt="David" id="david">
+    <div class="description" id="david-desc">
+      <h2>David</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;David is a mysterious new student at school, with a handsome and intimidating 
+        appearance that catches the attention of many. Despite his tough exterior, David
+        has a heart of gold and genuinely wants to make friends with those around him. 
+        However, his "greaser" demeanor and tough-looking exterior often lead others to
+        misjudge him and keep their distance. Despite this, David remains persistent in his
+        efforts to make connections with others. He has a love for vintage cars and is a talented mechanic. 
+        David is a loyal friend once you earn his trust, and he always stands up for what is right.</p>
+    </div>
+  </div>
+
+  <script>
+// Add click event listener to each image
+document.getElementById('john').addEventListener('click', function(event) {
+    // Stop the event from propagating to the document
+    event.stopPropagation();
+
+    // Hide any open description boxes
+    hideAllDescriptions();
+
+    document.getElementById('john-desc').style.display = 'block';
+  });
+
+  document.getElementById('rose').addEventListener('click', function(event) {
+    // Stop the event from propagating to the document
+    event.stopPropagation();
+
+    // Hide any open description boxes
+    hideAllDescriptions();
+
+    document.getElementById('rose-desc').style.display = 'block';
+  });
+
+  document.getElementById('david').addEventListener('click', function(event) {
+    // Stop the event from propagating to the document
+    event.stopPropagation();
+
+    // Hide any open description boxes
+    hideAllDescriptions();
+
+    document.getElementById('david-desc').style.display = 'block';
+  });
+
+  // Add click event listener to the document to hide the description box
+  document.addEventListener('click', function(event) {
+    // Get the description box element
+    var description = event.target.closest('.description');
+
+    // Check if the click event happened outside of the description box
+    if (!description) {
+      // Hide any open description boxes
+      hideAllDescriptions();
+    }
+  });
+
+  // Function to hide all description boxes
+  function hideAllDescriptions() {
+    var descriptions = document.getElementsByClassName('description');
+    for (var i = 0; i < descriptions.length; i++) {
+      descriptions[i].style.display = 'none';
+    }
+  }
+  
+  </script>
+</body>
+</html>
